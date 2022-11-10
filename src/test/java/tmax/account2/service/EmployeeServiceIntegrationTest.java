@@ -23,7 +23,7 @@ public class EmployeeServiceIntegrationTest {
     EmployeeRepository employeeRepository;
 
     @Test
-    @Commit//Commit 은 Test 임에도 실제 DB에 자료를 넣을 수 있게 해줌.
+    //@Commit//Commit 은 Test 임에도 실제 DB에 자료를 넣을 수 있게 해줌.
     void 회원가입() {
         //given
         Employee employee = new Employee();
@@ -53,7 +53,7 @@ public class EmployeeServiceIntegrationTest {
         employeeService.delete(employee);
 
         //then
-        List<Employee> result = employeeService.findAccounts();
+        List<Employee> result = employeeService.findEmployees();
         Assertions.assertThat(1).isEqualTo(result.size());
     }
 
@@ -68,7 +68,7 @@ public class EmployeeServiceIntegrationTest {
         employeeService.deleteById(employee.getId());
 
         //then
-        List<Employee> result = employeeService.findAccounts();
+        List<Employee> result = employeeService.findEmployees();
         Assertions.assertThat(0).isEqualTo(result.size());
 
     }
@@ -88,7 +88,7 @@ public class EmployeeServiceIntegrationTest {
         employeeService.deleteByResRegiNumber(employee.getResRegiNumber());
 
         //then
-        List<Employee> result = employeeService.findAccounts();
+        List<Employee> result = employeeService.findEmployees();
         Assertions.assertThat(1).isEqualTo(result.size());
     }
 
