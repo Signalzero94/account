@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+                <th>주민등록번호</th>
+                <th>회사명</th>
+                <th>부서</th>
+                <th>이메일주소</th>
+                <th>사번</th>
+                <th>사무실번호</th>
+                <th>집전화번호</th>
+                <th>휴대폰번호</th>
+                <th>직책</th>
+                <th>담당업무</th>
+                <th>근무위치</th>
+                <th>동호회</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.id}"></td>
+                <td th:text="${employee.name}"></td>
+                <td th:text="${employee.resRegiNumber}"></td>
+                <td th:text="${employee.address}"></td>
+                <td th:text="${employee.companyName}"></td>
+                <td th:text="${employee.department}"></td>
+                <td th:text="${employee.emailAddress}"></td>
+                <td th:text="${employee.employeeNumber}"></td>
+                <td th:text="${employee.companyNumber}"></td>
+                <td th:text="${employee.homeNumber}"></td>
+                <td th:text="${employee.mobileNumber}"></td>
+                <td th:text="${employee.position}"></td>
+                <td th:text="${employee.responsibilities}"></td>
+                <td th:text="${employee.workLocation}"></td>
+                <td th:text="${employee.club}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>+
