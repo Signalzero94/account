@@ -22,12 +22,10 @@ public class EmployeeController {
     public String home(){
         return "home";
     }
-
     @GetMapping("/employees/new")
     public String createForm(){
         return "employees/createEmployeeForm";
     }
-
     @PostMapping("/employees/new")
     public String create(EmployeeForm form){
         Employee employee = new Employee();
