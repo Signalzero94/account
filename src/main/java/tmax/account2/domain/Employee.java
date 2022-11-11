@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Employee_SEQ")
     private Long id;                //id
     private String name;            //이름
     private String employeeNumber;    //사번

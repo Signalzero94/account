@@ -25,19 +25,19 @@ public class EmployeeControllerTest {
     ObjectMapper objectMapper;
 
     @Test
-    void home화면_오류확인() throws Exception{
+    void home화면_오류여부확인() throws Exception{
         mvc.perform(MockMvcRequestBuilders.get("/"))
                         .andExpect(MockMvcResultMatchers
                         .status().isOk()).andDo(print());
     }
     @Test
-    void 가입화면_오류확인() throws Exception{
+    void 가입화면_오류여부확인() throws Exception{
         mvc.perform(MockMvcRequestBuilders.get("/employees/new"))
                 .andExpect(MockMvcResultMatchers
                         .status().isOk()).andDo(print());
     }
     @Test
-    void 직원목록화면_오류확인() throws Exception{
+    void 직원목록화면_오류여부확인() throws Exception{
         mvc.perform(MockMvcRequestBuilders.get("/employees"))
                 .andExpect(MockMvcResultMatchers
                         .status().isOk()).andDo(print());

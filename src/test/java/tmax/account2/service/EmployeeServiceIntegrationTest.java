@@ -87,7 +87,7 @@ public class EmployeeServiceIntegrationTest {
         employee2.setResRegiNumber("999999-1111111");
 
         employeeService.join(employee1);
-        IllegalStateException e = assertThrows(IllegalStateException.class, () -> employeeService.join(employee2));
+        IllegalStateException e = assertThrows(IllegalStateException.class,() -> employeeService.join(employee2));
         Assertions.assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
     }
 }
