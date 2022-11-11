@@ -9,22 +9,16 @@ import java.util.Optional;
 
 @Repository
 public interface SpringDataJpaEmployeeRepository extends JpaRepository<Employee, Long>, EmployeeRepository {
-
     @Override
     Optional<Employee> findByName(String name);
-
     @Override
     Optional<Employee> findById(Long aLong);
-
     @Override
     Employee save(Employee employee);
-
     @Override
     List<Employee> findAll();
-
     @Override
     void delete(Employee employee);
-
     @Override
     void deleteById(Long id);
     @Override Optional<Employee> deleteByName(String name);

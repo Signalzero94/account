@@ -12,7 +12,6 @@ import java.util.List;
 @Controller
 public class EmployeeController {
     private final EmployeeService employeeService;
-
     @Autowired
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;

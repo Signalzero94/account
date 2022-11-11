@@ -15,5 +15,4 @@ public interface EmployeeRepository {
     void deleteById(Long id);
     Optional<Employee> deleteByName(String name);
     Optional<String> deleteByResRegiNumber(String resRegiNumber);
-
 }
